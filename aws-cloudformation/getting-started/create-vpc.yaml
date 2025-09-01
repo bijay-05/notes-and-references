@@ -14,7 +14,7 @@ Parameters:
   PublicSubnet2CIDR:
     Description: Please enter the IP range (CIDR notation) for the public subnet in the second AZ
     Type: String
-    Default: 10.2.1.0/24 
+    Default: 10.1.2.0/24 
 
 Mappings:
   RegionMap:
@@ -73,7 +73,7 @@ Resources:
       MapPublicIpOnLaunch: true
   
   PublicRouteTable:
-    Type: AWS::EC2::Route
+    Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
   
