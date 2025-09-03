@@ -1,3 +1,9 @@
+# AWS CloudFormation
+
+A template is a text file that defines all the resources within a stack. A stack is the deployment of a **CloudFormation** template. From a single template, you can create multiple stacks. Each stack contains a collection of AWS resources that can be managed as a single unit.
+
+> When you us **CloudFormation**, you work with templates and stacks. You create templates to describe your AWS resources and their properties. Whenever you create a stack, **CloudFormation** provisions the resources that are described in your template.
+
 ## Sections on Template
 
 1. **Parameters**
