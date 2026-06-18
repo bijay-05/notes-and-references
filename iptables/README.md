@@ -1,8 +1,9 @@
 # IPTABLES
+
 Linux packet filtering system and firewall.
 
-
 ## CHAINS
+
 Chains are set of rules that are applied to network packets as they follow through the linux kernel's netfilter framework. There are three default chains in iptables.
 
 - **INPUT** : Applied to incoming packets that are destined for the host itself
@@ -13,6 +14,13 @@ Chains are set of rules that are applied to network packets as they follow throu
 
 - **PREROUTING** : Applied to incoming packets before they are routed to the destination, and often used to modify the packet's destination IP address or ports. This chain comes before **INPUT** chain.
 - **POSTROUTING** : Applied to outgoing packets after they are routed, and often used to modify the packet's source IP address or ports. This chain comes after **OUTPUT** chain.
+
+| Table  | Chain                                           |
+| ------ | ----------------------------------------------- |
+| raw    | PREROUTING, OUTPUT                              |
+| mangle | PREROUTING, INPUT, FORWARD, OUTPUT, POSTROUTING |
+| nat    | PREROUTING, INPUT, OUTPUT, POSTROUTING          |
+| filter | INPUT, FORWARD, OUTPUT                          |
 
 ## Examples
 
